@@ -1,0 +1,15 @@
+server default {
+	listen {
+		type = auth
+		ipaddr = *
+		port = 0
+	}
+
+	authorize {
+		preprocess
+
+		update control {
+			Proxy-To-Realm := "eduroam"
+		}
+	}
+}
